@@ -10,6 +10,14 @@ class Attractie {
     function __construct()  {
 
     }
+    function getGebruikerById(){
+        $db = new Db();
+        $conn = $db->getConnectie();
+        $sth = $conn->prepare("SELECT * FROM gebruiker WHERE idgebruiker = " .$this->idgebruiker);
+        $sth->execute();
+        $sth->setFetchMode(PDO::FETCH_CLASS,'Gebruiker');
+        return $sth->fetch();
+    }
     function getIdAttractie() {
         return $this->idattractie;
     }
