@@ -23,7 +23,7 @@ if (isset($_POST['login'])) {
         <div class="form-group">
             <label for="Login" class="col-sm-2 control-label">Login</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Login" name="login" required placeholder="Login">
+                <input type="text" class="form-control" id="login" name="login" required placeholder="Login">
             </div>
         </div>
         <div class="form-group">
