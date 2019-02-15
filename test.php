@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_POST['knop'])) {
 //formulier is niet verstuurd, dus formulier weergeven
     ?>
@@ -41,7 +42,10 @@ if(!isset($_POST['knop'])) {
     }
 
     if($rol == 'F') {
-        echo "<p>She is an Administrator</p>";
+        $_SESSION["rol"] = "baas";
+        if($_SESSION["rol"] == "baas"){
+
+        }
         header("Location: index.html");
     } else {
         echo "<p>He is just a normal user</p>";
